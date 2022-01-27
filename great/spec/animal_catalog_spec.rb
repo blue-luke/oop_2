@@ -9,6 +9,7 @@ describe AnimalCatalog do
       expect(catalog.sound(:cat)).to eq "meow"
       expect(catalog.sound(:bird)).to eq "chirp"
       expect(catalog.sound(:cow)).to eq "moo"
+      expect(catalog.sound(:bee)).to eq "buzz"
     end
 
     it 'raises an error given an unrecognised animal' do
@@ -22,6 +23,7 @@ describe AnimalCatalog do
       expect(catalog.number_of_legs(:cat)).to eq 4
       expect(catalog.number_of_legs(:bird)).to eq 2
       expect(catalog.number_of_legs(:cow)).to eq 4
+      expect(catalog.number_of_legs(:bee)).to eq 6
     end
 
     it 'raises an error given an unrecognised animal' do
@@ -35,6 +37,7 @@ describe AnimalCatalog do
       expect(catalog.number_of_wings(:cat)).to eq 0
       expect(catalog.number_of_wings(:bird)).to eq 2
       expect(catalog.number_of_wings(:cow)).to eq 0
+      expect(catalog.number_of_wings(:bee)).to eq 2
     end
 
     it 'raises an error given an unrecognised animal' do
