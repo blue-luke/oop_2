@@ -44,4 +44,18 @@ describe AnimalCatalog do
       expect { catalog.number_of_wings(:garbage) }.to raise_error "Unrecognised animal"
     end
   end
+
+  describe '#demanour' do
+  it 'returns the number of legs of the given animal' do
+    expect(catalog.demeanour(:dog)).to eq 0
+    expect(catalog.demeanour(:cat)).to eq 0
+    expect(catalog.demeanour(:bird)).to eq 2
+    expect(catalog.demeanour(:cow)).to eq 0
+    expect(catalog.demeanour(:bee)).to eq 2
+  end
+
+  it 'raises an error given an unrecognised animal' do
+    expect { catalog.number_of_wings(:garbage) }.to raise_error "Unrecognised animal"
+  end
+end
 end
