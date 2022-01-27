@@ -1,6 +1,7 @@
 require 'dog'
 require 'cat'
 require 'bird'
+require 'cow'
 
 # Understands looking up information about animals
 class AnimalCatalog
@@ -25,7 +26,7 @@ class AnimalCatalog
 
   private
 
-  ANIMALS = { dog: Dog, cat: Cat, bird: Bird }.freeze
+  ANIMALS = { dog: Dog, cat: Cat, bird: Bird, cow: Cow }.freeze
 
   def ensure_known_animal(type)
     raise "Unrecognised animal" unless ANIMALS.include?(type)
