@@ -42,4 +42,14 @@ class AnimalCatalog
       fail "Unrecognised animal"
     end
   end
+
+  def can_fly(type)
+    if type == :dog || type == :cat || type == :cow
+      false
+    elsif type == :bird
+      true
+    else
+      fail "Unrecognised animal"
+    end
+  end
 end

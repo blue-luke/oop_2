@@ -54,4 +54,17 @@ describe AnimalCatalog do
       expect { catalog.demeanour(:garbage) }.to raise_error "Unrecognised animal"
     end
   end
+
+  describe '#can fly' do
+  it 'returns the demeanour of the given animal' do
+    expect(catalog.can_fly(:dog)).to eq false
+    expect(catalog.can_fly(:cat)).to eq false
+    expect(catalog.can_fly(:bird)).to eq true
+    expect(catalog.can_fly(:cow)).to eq false
+  end
+
+  it 'raises an error given an unrecognised animal' do
+    expect { catalog.demeanour(:garbage) }.to raise_error "Unrecognised animal"
+  end
+end
 end
