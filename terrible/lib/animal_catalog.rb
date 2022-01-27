@@ -32,4 +32,14 @@ class AnimalCatalog
       fail "Unrecognised animal"
     end
   end
+
+  def demeanour(type)
+    if type == :bird || type == :cat || type == :cow
+      "Placid"
+    elsif type == :dog
+      "Lary"
+    else
+      fail "Unrecognised animal"
+    end
+  end
 end
