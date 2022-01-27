@@ -8,6 +8,7 @@ describe AnimalCatalog do
       expect(catalog.sound(:dog)).to eq "woof"
       expect(catalog.sound(:cat)).to eq "meow"
       expect(catalog.sound(:bird)).to eq "chirp"
+      expect(catalog.sound(:cow)).to eq "moo"
     end
 
     it 'raises an error given an unrecognised animal' do

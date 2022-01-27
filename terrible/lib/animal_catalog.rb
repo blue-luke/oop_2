@@ -6,6 +6,8 @@ class AnimalCatalog
       "meow"
     elsif type == :bird
       "chirp"
+    elsif type == :cow
+      "moo"
     else
       fail "Unrecognised animal"
     end
